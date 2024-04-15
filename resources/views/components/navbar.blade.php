@@ -26,6 +26,11 @@
                     </ul>
                 </li>
             </ul> 
+            @auth 
+            Benvenuto, {{Auth::user()->name}}
+            @else 
+            Ciao Accedi
+            @endauth 
         </div>
     </div>
 </nav>
