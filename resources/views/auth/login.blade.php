@@ -24,8 +24,8 @@
 
         
         <div class="mb-3 form-check">
-            <input name="password" type="password" class="form-control" id="exampleCheck">
             <label class="form-label" for="exampleCheck1">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleCheck">
           </div>
 
           
