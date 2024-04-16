@@ -3,16 +3,38 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+
+    public function byCategory(Category $category){
+        $articles = $category->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byCategory', compact('category', 'articles'));
+    }
+
+    public function byRedactor(User $user){
+        $articles = $user->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byRedactor', compact('user', 'articles'));
+    }
+
+
+    public function __construct(){
+        $this->middleware('auth')->except('index', 'show');
+    }
+    
+        
+    
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = Article::orderBy('created_at', 'desc')->get();
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -28,7 +50,24 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|unique:articles|min:5',
+            'subtitle' => 'required|min:5',
+            'body' => 'required|min:10',
+            'img' => 'image|required',
+            'category' => 'required',
+        ]);
+    
+        $article = Article::create([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'img' => $request->file('img')->store('public/images'),
+            'category_id' => $request->category,
+            'user_id' => Auth::user()->id,
+        ]);
+    
+        return redirect(route('homePage'))->with('message', 'Articolo creato correttamente');
     }
 
     /**
@@ -36,7 +75,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

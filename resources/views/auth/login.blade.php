@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid text-center p-5">
+    <div class="container text-center p-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4">
     <h1>Accedi</h1>

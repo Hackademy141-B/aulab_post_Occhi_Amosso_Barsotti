@@ -8,6 +8,7 @@
     <title>Aulab_Post</title>
 </head>
 <body>
+    
 
     <x-navbar />
      {{$slot}}
