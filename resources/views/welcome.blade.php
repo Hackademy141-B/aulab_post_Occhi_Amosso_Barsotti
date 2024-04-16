@@ -1,12 +1,23 @@
 <x-layout>
 
-    <div class="container-fluid  text-center text-dark">
-        <div class="display-2">
+    {{-- <div class="container-fluid  text-center text-dark">
+        <div id="title" class="display-2">
           Prima pagina
         </div>
-    </div>
+    </div> --}}
+   <section class="hero">
+        <div class="hero-text">
+            <h1>Aulab Post</h1>
+            <h2>Create your card, for free</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <button  href="{{ route('login') }}" type="button"  class="btn btn-outline-dark" >Crea la tua prima card</button>
+        </div>
+        <div class="hero-img">
+            <img src="./img1.png" alt="">
+        </div>
+   </section>
 
-    <div class="container my-5">
+    {{-- <div class="container my-5">
         <div class="row justify-content-around">
             @foreach($articles as $article)
                 <div class="col-12 col-md-3">
@@ -28,6 +39,6 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </div> --}}
     
 </x-layout>

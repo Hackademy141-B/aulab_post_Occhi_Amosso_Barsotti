@@ -7,6 +7,45 @@
     --rosso: #84130b;
 }
 
-body{
- 
+/* #title{
+
+        text-transform: uppercase;
+        padding-top: 23vh;
+        text-align: start;
+        margin-left: 10%;
+
+    
+} */
+
+.hero{
+    height: 90%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
 }
+
+section{
+    padding: 0 20%;
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px
+}
+
+.hero-text h1{
+    font-size: 90px;
+    line-height: 1;
+    margin: 0
+}
+
+.hero-img img{
+    width: 500px;
+    height: auto;
+}
+
