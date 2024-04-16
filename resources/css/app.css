@@ -1,1 +1,12 @@
 @import'bootstrap';
+
+:root{
+    --nero: #101419;
+    --verde: #307351;
+    --grigio: #E0E0E1;
+    --rosso: #84130b;
+}
+
+body{
+ 
+}
