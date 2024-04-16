@@ -12,7 +12,7 @@
         <div class="row justify-content-around">
             @foreach($articles as $article)
                 <div class="col-12 col-md-3 my-2">
-                    <div class="card">
+                    <div class="card shadow p-4 border border-3  rounded-4">
                         <img src="{{ Storage::url($article->img) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $article->title }}</h5>
