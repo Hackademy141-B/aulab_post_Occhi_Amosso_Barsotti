@@ -52,17 +52,17 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Prodotti</a>
+              <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Articoli</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('article.create')}}">Link</a>
+              <a class="nav-link" href="{{route('article.create')}}">Inserisci Articolo</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Accedi
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                 <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                 <li>
                   <hr class="dropdown-divider">
