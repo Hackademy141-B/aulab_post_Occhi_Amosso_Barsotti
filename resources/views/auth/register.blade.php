@@ -1,9 +1,8 @@
 <x-layout>
-    <div class="container-fluid text-center p-5">
+    <div class="container my-5 text-center mt-5 p-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-4">
-
-                <h1>Registrati</h1>
+            <div class="col-12 col-md-6 shadow border border-light-subtle rounded-4 p-5 ">
+    <h1 class="">Registrati</h1>
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -31,14 +30,14 @@
 
                     </div>
 
-                    <div class="mb-3 form-check">
-                        <input name="password" type="password" class="form-control" id="exampleCheck">
+                    <div class="mb-3">
                         <label class="form-label" for="exampleCheck">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleCheck">
                     </div>
 
-                    <div class="mb-3 form-check">
-                        <input name="password_confirmation" type="password" class="form-control" id="Check">
+                    <div class="mb-3">
                         <label class="form-label" for="exampleCheck">Conferma la password</label>
+                        <input name="password_confirmation" type="password" class="form-control" id="Check">
                     </div>
 
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-trasparent navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -32,9 +32,55 @@
             @auth 
             Benvenuto, {{Auth::user()->name}}
             @else 
-            Ciao Accedi
+            <a type="button" class="btn btn-outline-dark" href="{{ route('login') }}">Ciao Accedi</a> 
             @endauth 
         </div>
     </div>
 </nav>
 
+<nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Aulab Post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Prodotti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('article.create')}}">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Accedi
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a></li>
+                        <form id="form-logout" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        </form>
+                    </ul>
+                </li>
+            </ul> 
+            @auth 
+            Benvenuto, {{Auth::user()->name}}
+            @else 
+            <a type="button" class="btn btn-outline-dark justify-content-center mb-5" href="{{ route('login') }}">Ciao Accedi</a> 
+            @endauth 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
