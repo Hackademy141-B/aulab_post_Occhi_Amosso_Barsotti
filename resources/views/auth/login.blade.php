@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container my-5 text-center mt-5 p-5">
+    <div class="container my-5 mx-auto text-center  mt-5 pt-5 pb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 shadow border border-light-subtle rounded-4 p-5 ">
     <h1 class="">Accedi</h1>

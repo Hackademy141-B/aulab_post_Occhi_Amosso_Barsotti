@@ -1,4 +1,9 @@
+@auth
 <nav class="navbar navbar-expand-lg  bg-body-trasparent navbar-light">
+
+@else
+<nav class="navbar navbar-expand-lg d-none bg-body-trasparent navbar-light">
+@endauth
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

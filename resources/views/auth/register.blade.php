@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container my-5 text-center mt-5 p-5">
+    <div class="container  my-5 text-center mt-5 p-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 shadow border border-light-subtle rounded-4 p-5 ">
     <h1 class="">Registrati</h1>
