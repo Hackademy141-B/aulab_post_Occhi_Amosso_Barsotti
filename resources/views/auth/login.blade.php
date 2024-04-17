@@ -18,8 +18,8 @@
         @csrf
 
         <div class="mb-3">
-          <label for="InputPassword" class="form-label">Nome</label>
-          <input name="name" type="text" class="form-control" id="InputPassword"  value="{{old('name')}}">
+          <label for="email" class="form-label">Email</label>
+          <input name="email" type="email" class="form-control" id="email"  value="{{old('email')}}">
         </div>
 
         

@@ -21,11 +21,14 @@
                 <hr>
                 <p>{{ $article->body }}</p>
                 <div class="text-center">
-                    <a href="{{ route('article.index') }}" class="btn btn-info text-white my-5">Torna indietro</a>
+                    <a href="{{ route('article.index') }}" class="btn btn-secondary text-white my-5">Torna indietro</a>
                 </div>
             </div>
         </div>
     </div>
     
+    
+
+
     </x-layout>
     

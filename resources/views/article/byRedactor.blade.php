@@ -19,7 +19,7 @@
                             <p class="card-text">{{ $article->subtitle }}</p>
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                            Creato il {{ $article->created_at->format('d/m/Y') }} da {{ $article->user->name }}
+                            Redatto il {{ $article->created_at->format('d/m/Y') }} da {{ $article->user->name }}
                             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-info text-white">Leggi</a>
                         </div>
                     </div>
