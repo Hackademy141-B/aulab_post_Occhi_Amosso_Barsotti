@@ -1,9 +1,9 @@
 
 <x-layout>
 
-    <div class="container-fluid p-5 text-center text-white">
-        <div class="row justify-content-center">
-            <h1 class="display-1">
+    <div class="container-fluid  text-center text-dark">
+        <div class="row justify-content-center ">
+            <h1 class="display-3 frs-italic">
                 Tutti gli articoli
             </h1>
         </div>

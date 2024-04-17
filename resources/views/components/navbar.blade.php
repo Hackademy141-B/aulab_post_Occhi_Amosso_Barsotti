@@ -1,4 +1,4 @@
-{{-- <nav class="navbar navbar-expand-lg bg-body-trasparent navbar-dark">
+<nav class="navbar navbar-expand-lg shadow bg-body-trasparent navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -36,9 +36,9 @@
             @endauth 
         </div>
     </div>
-</nav> --}}
+</nav>
 
-<nav class="navbar bg-body-trasparent fixed-top">
+{{-- <nav class="navbar bg-body-trasparent fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -83,4 +83,4 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> --}}
