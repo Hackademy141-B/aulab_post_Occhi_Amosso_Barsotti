@@ -2,12 +2,30 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 
 :root{
-    --nero: #101419;
+    --nero: #24262b;
     --verde: #307351;
     --grigio: #E0E0E1;
     --rosso: #84130b;
 }
 
+*{
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: bold;
+}
+
+.workwithus {
+  font-size: 60px;
+}
+
+.allArticles{
+  font-size: 60px;
+}
+
+
+.insertArticle{
+  font-size: 60px;
+}
 /* #title{
 
         text-transform: uppercase;
@@ -24,12 +42,33 @@
   
 }
 
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background: #24262b;
+  border-radius: 10px;
+  
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  padding: 20px;
+}
 
 
-.navbar fixed{
-  padding: 5px 100px;
-  background: white;
+.bgColor{
+  background-color: white;
+}
 
+.navbar{
+  transition:all 0.4s ;
 }
 
 .fade-in{

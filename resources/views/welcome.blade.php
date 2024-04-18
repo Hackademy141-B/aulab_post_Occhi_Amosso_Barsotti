@@ -48,13 +48,13 @@
         </div>
     </div> --}}
     <div class="box">
-        <div class="boxtitle  text-center  pt-3 d-flex justify-content-center">
+        <div class="boxtitle  text-center  pt-5 d-flex justify-content-center">
             <h1 class="title pt-3  blockquote-4">Articoli</h1>
         </div>
         <div id="carouselExampleInterval" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="cards-wrapper">
+                    <div class="cards-wrapper pb-5">
                         <div class="container my-5">
                             <div class="row justify-content-around ">
                                 @foreach ($articles as $article)
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <div class="cards-wrapper">
+                    <div class="cards-wrapper pb-5">
                         <div class="container  my-5">
                             <div class="row  justify-content-around ">
                                 @foreach ($articles as $article)
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="cards-wrapper">
+                    <div class="cards-wrapper pb-5">
                         <div class="container  my-5">
                             <div class="row  justify-content-around ">
                                 @foreach ($articles as $article)

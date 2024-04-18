@@ -1,7 +1,7 @@
 {{-- layout --}}
 <x-layout>
-    <div class="container-fluid  text-center text-dark">
-        <div class="display-1">
+    <div class="container-fluid pt-5 text-center text-dark">
+        <div class="insertArticle pt-5">
             Inserisci un articolo
         </div>
     </div>
@@ -60,7 +60,7 @@
 
                     <div class="mt-2">
                         <button class="btn btn-outline-dark ">Inserisci un articolo</button>
-                        <p class="mt-3"><a class="btn btn-outline-info" href="{{ route('homePage') }}">Torna alla
+                        <p class="mt-3 "><a class="btn btn-outline-danger" href="{{ route('homePage') }}">Torna alla
                                 home</a></p>
                     </div>
                 </form>

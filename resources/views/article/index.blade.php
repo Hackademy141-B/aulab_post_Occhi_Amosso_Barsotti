@@ -3,7 +3,7 @@
 
     <div class="container-fluid  text-center text-dark">
         <div class="row justify-content-center pt-5">
-            <h1 class="display-2 pt-5">
+            <h1 class="allArticles pt-5">
                 Tutti gli articoli
             </h1>
         </div>
