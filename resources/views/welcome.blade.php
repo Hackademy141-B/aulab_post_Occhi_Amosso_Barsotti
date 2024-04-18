@@ -14,9 +14,9 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>AuLab Post</h1>
-            <h2>Create your article, for free</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <h1 class="fade-in">AuLab Post</h1>
+            <h2 class="fade-in">Create your article, for free</h2>
+            <p class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
 
         </div>
         {{-- <div class="hero-img">
