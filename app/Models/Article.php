@@ -12,7 +12,7 @@ class Article extends Model
 
     use HasFactory;
 
-    protected $fillable=['title','subtitle','body','img','user_id','category_id'];
+    protected $fillable=['title','subtitle','body','img','user_id', 'is_accepted','category_id'];
 
     public function user(){
         return $this->belongsTo(User::class);

@@ -34,7 +34,11 @@
               @if(Auth::user()->is_admin)
               <li class="nav-item"><a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
               @endIf
-              <li class="nav-item ">
+              @if(Auth::user()->is_revisor)
+              <li class="nav-item"><a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard dal revisore</a></li>
+              @endIf
+
+             <li class="nav-item ">
                 <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
             </li>
               <li class="nav-item me-auto">
