@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,7 @@ Route::get('/article/category/{category}', [ArticleController::class,'byCategory
 Route::get('/article/user/{user}', [ArticleController::class,'byRedactor'])->name('article.byRedactor');
 Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
+
+Route::middleware('admin')->group(function(){
+    Route::get('/admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
