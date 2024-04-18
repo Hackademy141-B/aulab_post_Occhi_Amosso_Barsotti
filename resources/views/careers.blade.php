@@ -1,10 +1,11 @@
 
 <x-layout>
-    <div class="container-fluid pb-5 text-center text-white">
+    <div class="container-fluid pt-5 text-center text-dark">
         <h1 class="display-1">Lavora con noi</h1>
     </div>
-    <div class="row justify-content-center align-items-center border rounded p-2 shadow">
-        <div class="col-12 col-md-6">
+    <div class="container my-5 mx-auto text-center  mt-5 pt-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 shadow bg-light border border-light-subtle rounded-4 p-5 ">
             <h2>Lavora come amministratore</h2>
             <p>Cosa fai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur doloribus, voluptates, sequi minus dignissimos ullam laboriosam fugia doloremque saepe voluptate nesciunt exercitationem obcaecati tenetur in, deleniti ea accusantium?</p>
             <h2>Lavora come revisore</h2>
@@ -38,7 +39,7 @@
                     <label for="message" class="form-label">Parlaci di te</label>
                     <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
                 </div>
-                <button type="submit" class="btn btn-info text-white">Invia la candidatura</button>
+                <button type="submit" class="btn btn-secondary text-white">Invia la candidatura</button>
             </form>
         </div>
     </div>

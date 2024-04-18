@@ -13,7 +13,9 @@
     <x-navbar />
      {{$slot}}
 
-     <script type="text/javascript" src="js/particles.min.js"></script>
-     <script type="text/javascript" src="js/custom.js"></script>
+     
+            <div id="particles-js"></div>
+
+        <script src="particles.js"></script>
 </body>
 </html>

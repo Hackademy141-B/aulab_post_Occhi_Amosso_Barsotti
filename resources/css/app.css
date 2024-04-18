@@ -1,4 +1,5 @@
 @import'bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
 
 :root{
     --nero: #101419;
@@ -16,6 +17,18 @@
 
     
 } */
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  
+}
+
+.fade-in{
+  animation: fade-in 2s ;
+}
+
+
 
 .hero{
     height: 90%;
@@ -63,7 +76,8 @@ body {
 
   .h-img{
     height: 210px;
-    size: cover;
+    width: 100%;
+    object-fit: cover;
   }
 
   .cards-wrapper{
@@ -78,10 +92,48 @@ body {
   body{
     padding: 0;
     margin: 0;
-    background-image: url("");
+    background-image: url("4853433.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     
+}
+
+.footerbox{
+  margin: 0;
+  padding: 1px;
+  box-sizing: border-box;
+  
+}
+
+.containerfooter{
+  max-width: 1170px;
+  background-color: red;
+  margin: auto;
+}
+
+#row1{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #c7c7c7;
+}
+
+
+.ulfooter{
+  list-style: none;
+}
+
+.footer{
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+/* .col{
+  width: 5%;
+  padding: 0 15px;
+} */
+
+.copytext{
+ font-size: 15px;
 }
