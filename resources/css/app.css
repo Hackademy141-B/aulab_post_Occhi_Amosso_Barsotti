@@ -24,8 +24,16 @@
   
 }
 
+
+
+.navbar fixed{
+  padding: 5px 100px;
+  background: white;
+
+}
+
 .fade-in{
-  animation: fade-in 2s ;
+  animation: fade-in 1.7s ;
 }
 
 
