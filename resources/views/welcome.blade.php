@@ -203,9 +203,10 @@
                         <div class="col-12 col-md-3">
                                 <h4 class="text-light">Social</h4>
                                 <div class="social">
-                                    <a class="link-offset-2 link-underline link-underline-opacity-0 text-light" href="#"></a>
-                                    <i class="bi-alarm"></i>
-                                   
+                                    <a class=" text-light" href="#"><i class="bi bi-facebook"></i></a>
+                                    <a class=" text-light" href="#"><i class="bi bi-twitter"></i></a>
+                                    <a class=" text-light" href="#"><i class="bi bi-instagram"></i></a>
+                                    <a class="text-light" href="#"><i class="bi bi-telegram"></i></a>
                                 </ul>
                             </div>
                         </div> 

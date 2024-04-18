@@ -45,7 +45,7 @@
                       @csrf
                     </form>
                     @else 
-                    <a type="button" class="btn btn-outline-dark" href="{{ route('login') }}">Ciao Accedi</a> 
+                    <a type="button" class="btn btn-outline-dark" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right"> </i>Accedi</a> 
                     @endauth 
                   </ul >
         </div>
