@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavora con noi</title>
-</head>
-<body class="bg-dark text-white">
+
 <x-layout>
     <div class="container-fluid pb-5 text-center text-white">
         <h1 class="display-1">Lavora con noi</h1>
@@ -28,7 +20,7 @@
                 </ul>
             </div>
             @endif
-            <form class="p-5" action="" method="">
+            <form class="p-5" action="{{route('careers.submit')}}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label for="role" class="form-label">Quale ruolo ti stai candidando?</label>
@@ -40,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input name="email" type="email" value="{{old('email') ?? Auth::user()->email}}">
+                    <input class="form-control" name="email" type="email" value="{{old('email') ?? Auth::user()->email}}">
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Parlaci di te</label>
@@ -51,5 +43,4 @@
         </div>
     </div>
 </x-layout>
-</body>
-</html>
+
