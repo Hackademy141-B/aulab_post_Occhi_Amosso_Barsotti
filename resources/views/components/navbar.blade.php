@@ -18,6 +18,7 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="{{ route('article.index') }}">Tutti gli articoli</a>
                 </li>
+<<<<<<< HEAD
                 @auth
                     @if (Auth::user()->is_admin)
                         <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
@@ -29,6 +30,31 @@
                         <a class="nav-link" href="{{ route('article.create') }}">Inserisci un articolo</a>
                     </li>
                     {{-- </ul>
+=======
+               
+                {{-- <li class="nav-item dropdown"> --}}
+                  {{-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Accedi
+                </a> --}}
+                {{-- <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                  <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                </ul> --}}
+              {{-- </li> --}}
+            
+              @auth 
+              @if(Auth::user()->is_admin)
+              <li class="nav-item"><a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+              @endIf
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
+            </li>
+              <li class="nav-item me-auto">
+                <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
+              </li>
+            {{-- </ul>
+>>>>>>> a77e0d9483eac0ded7976e69ac463f95030b3297
                   <ul class="navbar-nav"> --}}
                     <li class="me-3 mt-2">Benvenuto, {{ Auth::user()->name }}</li>
                     <li><a type="button" class="btn btn-outline-dark mt-auto" href="#"

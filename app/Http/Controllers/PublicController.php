@@ -36,7 +36,7 @@ class PublicController extends Controller
         $email = $request->email;
         $message = $request->message;
 
-        Mail::to('noreply-hr@theaulabpost.com')->send(new CareerRequestMail(compact('role', 'email', 'message')));
+        Mail::to('admin@theaulabpost.com')->send(new CareerRequestMail(compact('role', 'email', 'message')));
 
         switch ($role) {
             case 'admin':
