@@ -49,3 +49,39 @@ section{
     height: auto;
 }
 
+body {
+    background-color: #f5f7fa;
+  }
+  
+  .fas.fa-heart:hover {
+    color: #f44336 !important;
+  }
+  
+  .fas.fa-share-alt:hover {
+    color: #0d47a1 !important;
+  }
+
+  .h-img{
+    height: 210px;
+    size: cover;
+  }
+
+  .cards-wrapper{
+    display: flex;
+  }
+
+  .box{
+    background-color: #ffffff;
+
+  }
+
+  body{
+    padding: 0;
+    margin: 0;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}

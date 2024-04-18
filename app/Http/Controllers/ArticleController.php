@@ -23,7 +23,7 @@ class ArticleController extends Controller
 
 
     public function __construct(){
-        $this->middleware('auth')->except('index', 'show');
+        $this->middleware('auth')->except('index', 'show' ,'byRedactor', 'byCategory');
     }
     
         
@@ -67,7 +67,7 @@ class ArticleController extends Controller
             'user_id' => Auth::user()->id,
         ]);
     
-        return redirect()->route('homePage')->with('message', 'Articolo creato correttamente');
+        return redirect(route('homePage'))->with('message', 'Articolo creato correttamente!');
     }
 
     /**
