@@ -1,7 +1,7 @@
 
 <x-layout>
     <div class="container-fluid pt-5 text-center text-dark">
-        <h1 class="display-1">Lavora con noi</h1>
+        <h1 class="workwithus pt-5">Lavora con noi</h1>
     </div>
     <div class="container my-5 mx-auto text-center  mt-5 pt-5 pb-5">
         <div class="row justify-content-center">
