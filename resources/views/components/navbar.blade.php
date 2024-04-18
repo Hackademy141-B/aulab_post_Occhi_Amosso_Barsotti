@@ -28,6 +28,9 @@
               {{-- </li> --}}
             
               @auth 
+              @if(Auth::user()->is_admin)
+              <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+              @endIf
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
             </li>
