@@ -27,7 +27,7 @@
                     <label for="role" class="form-label">Quale ruolo ti stai candidando?</label>
                     <select name="role" id="role" class="form-control">
                         <option value="admin">Amministratore</option>
-                        <option value="reviewer">Revisore</option>
+                        <option value="revisor">Revisore</option>
                         <option value="writer">Redattore</option>
                     </select>
                 </div>
