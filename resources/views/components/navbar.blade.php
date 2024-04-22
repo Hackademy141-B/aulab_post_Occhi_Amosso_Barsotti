@@ -44,6 +44,12 @@
               <li class="nav-item me-auto">
                 <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
               </li>
+              <li>
+                <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                  <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+                  <button class="btn btn-outline-info" type="submit">Cerca</button>
+                </form>                
+              </li>
             {{-- </ul>
                   <ul class="navbar-nav"> --}}
                     <li class="me-3 mt-2">Benvenuto, {{ Auth::user()->name }}</li>
