@@ -9,7 +9,7 @@
 <div class="container-fluid">
 
     @if (session('message'))
-    <div class=" alert alert-danger text-center mt-5">
+    <div class=" alert alert-secondary text-center mt-5">
         {{ session('message') }}
     </div>
     @endif
