@@ -42,6 +42,12 @@
   
 }
 
+@keyframes fade-out {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+  
+}
+
 ::-webkit-scrollbar{
   width: 7px;
 }
@@ -73,6 +79,10 @@
 
 .fade-in{
   animation: fade-in 1.7s ;
+}
+
+.fade-out{
+  animation: fade-out 5s;
 }
 
 

@@ -4,7 +4,7 @@
       var header = document.querySelector("navbar");
       header.classList.toggle("sticky", window.scrollY > 0);
   }) --}}
-<header>
+{{-- <header> --}}
 <div class="container-fluid">
     <nav id="navbar" class="navbar fixed-top w-100 px-3 navbar-expand-lg bg-body-trasparent  navbar-light">
         <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
@@ -61,7 +61,7 @@
         </div>
 </div>
 </nav>
-</header>
+{{-- </header> --}}
 
 {{-- <nav class="navbar bg-body-trasparent fixed-top">
     <div class="container-fluid">
