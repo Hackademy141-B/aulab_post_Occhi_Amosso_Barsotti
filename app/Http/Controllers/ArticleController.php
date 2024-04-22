@@ -26,7 +26,11 @@ class ArticleController extends Controller
         $this->middleware('auth')->except('index', 'show' ,'byRedactor', 'byCategory');
     }
     
-        
+    public function articleSearch(Request $request){
+        $query = $request->input('query');
+        $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('article.search-index', compact('articles', 'query'));
+      }
     
     /**
      * Display a listing of the resource.
