@@ -26,6 +26,10 @@
 .insertArticle{
   font-size: 60px;
 }
+
+.adminWelcome{
+  font-size: 60px;
+}
 /* #title{
 
         text-transform: uppercase;
@@ -41,6 +45,16 @@
   100% {opacity: 1;}
   
 }
+
+
+.fade-in{
+  animation: fade-in 1.7s ;
+}
+
+.slide-up{
+  animation: slide-up 1s;
+}
+
 
 ::-webkit-scrollbar{
   width: 7px;
@@ -71,9 +85,6 @@
   transition:all 0.4s ;
 }
 
-.fade-in{
-  animation: fade-in 1.7s ;
-}
 
 
 

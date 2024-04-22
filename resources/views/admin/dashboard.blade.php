@@ -1,9 +1,9 @@
 <x-layout>
 
-<div class=" container-fluid p-5 bg-info text-center text-white">
-    <div class="row justify-content-center">
-        <div class="display-1">
-            Bentornato Amministratore
+<div class=" container-fluid pt-5  text-center ">
+    <div class="row pt-5  justify-content-center">
+        <div class="adminWelcome">
+            Bentornato!
         </div>
     </div>
 </div>
@@ -14,7 +14,7 @@
     </div>
 @endif
 
-<div class=" container my-5">
+<div class=" container pt-5 my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>Richieste per ruolo Amministratore</h2>

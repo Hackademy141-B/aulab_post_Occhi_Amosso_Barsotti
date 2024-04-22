@@ -1,10 +1,6 @@
 <x-layout>
 
-    {{-- <div class="container-fluid  text-center text-dark">
-        <div id="title" class="display-2">
-          Prima pagina
-        </div>
-    </div> --}}
+
 
     @if (session('message'))
         <div class="alert alert-success text-center">
@@ -14,14 +10,10 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1 class="fade-in">AuLab Post</h1>
-            <h2 class="fade-in">Create your article, for free</h2>
-            <p class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-
+            <h1  class="fade-in">AuLab Post</h1>
+            <h2  class="fade-in">Create your article, for free</h2>
+            <p  class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
         </div>
-        {{-- <div class="hero-img">
-            <img src="./img1.png" alt="">
-        </div> --}}
     </section>
 
     {{-- <div class="container my-5 ">
@@ -49,7 +41,7 @@
     </div> --}}
     <div class="box">
         <div class="boxtitle  text-center  pt-5 d-flex justify-content-center">
-            <h1 class="title pt-3  blockquote-4">Articoli</h1>
+            <h1 class="slide-up pt-3  blockquote-4">Articoli</h1>
         </div>
         <div id="carouselExampleInterval" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-inner">
