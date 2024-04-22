@@ -41,7 +41,7 @@
     </div> --}}
     <div class="box">
         <div class="boxtitle  text-center  pt-5 d-flex justify-content-center">
-            <h1 class="slide-up pt-3  blockquote-4">Articoli</h1>
+            <h2 class="title pt-3  blockquote-4">Gli Ultimi Articoli</h2>
         </div>
         <div id="carouselExampleInterval" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -50,7 +50,7 @@
                         <div class="container my-5">
                             <div class="row justify-content-around ">
                                 @foreach ($articles as $article)
-                                    <div class="col-10 col-md-3 my-2 ">
+                                    <div class="col-10 col-md-4 my-2 ">
                                         <div class="card  shadow  border border-3  rounded-4">
                                             <img class="img-thumbnail border border-0 rounded-4 card-img-top h-img"
                                                 src="{{ Storage::url($article->img) }}" alt="">
@@ -58,19 +58,21 @@
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">{{ $article->category->name }}</a>
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    <br>
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
-                                                <p class="small text-muted  text-capitalize">
-                                                    {{ $article->category->name }}</p>
-                                                <div
+                                                {{-- <p class="small text-muted  text-capitalize">
+                                                    {{ $article->category->name }}</p> --}}
+                                                {{-- <div
                                                     class="text-muted d-none d-flex justify-content-between align-items-center">
                                                     Redatto il {{ $article->created_at->format('d/m/Y') }} da
                                                     {{ $article->user->name }}
-                                                </div>
+                                                </div> --}}
+                                                <br>
                                                 <a href="{{ route('article.show', compact('article')) }}"
-                                                    class="btn btn-secondary ">Leggi</a>
+                                                    class="btn btn-secondary mt-2">Leggi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
+                {{-- <div class="carousel-item" data-bs-interval="2000">
                     <div class="cards-wrapper pb-5">
                         <div class="container  my-5">
                             <div class="row  justify-content-around ">
@@ -146,9 +148,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -157,7 +159,7 @@
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> --}}
         </div>
     </div>
 

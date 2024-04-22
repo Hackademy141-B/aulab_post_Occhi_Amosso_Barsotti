@@ -31,7 +31,7 @@ class AdminController extends Controller
     }
 
     public function setWriter(User $user){
-        $user->is_admin = true;
+        $user->is_writer = true;
         $user->save();
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
