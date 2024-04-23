@@ -9,15 +9,9 @@
 <div class="container-fluid">
 
     @if (session('message'))
-<<<<<<< HEAD
-        <div class="fade-out alert alert-success text-center">
-            {{ session('message') }}
-        </div>
-=======
     <div class=" alert alert-secondary text-center mt-5">
         {{ session('message') }}
     </div>
->>>>>>> 96bb62af60c0b0f5efc866cba4d73673470b33ab
     @endif
 </div>
 

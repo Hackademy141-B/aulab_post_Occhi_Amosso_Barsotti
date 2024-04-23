@@ -81,15 +81,8 @@
   animation: fade-in 1.7s ;
 }
 
-.fade-out{
-<<<<<<< HEAD
-  animation: fade-out 1.7s ;
-}
-=======
-  animation: fade-out 5s;
-}
 
->>>>>>> 96bb62af60c0b0f5efc866cba4d73673470b33ab
+
 
 
 .hero{
