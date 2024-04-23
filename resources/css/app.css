@@ -83,7 +83,9 @@
   animation: fade-in 1.7s ;
 }
 
-
+.fade-out{
+  animation: fade-out 5s;
+}
 
 
 

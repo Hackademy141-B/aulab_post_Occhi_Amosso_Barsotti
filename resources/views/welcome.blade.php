@@ -70,9 +70,19 @@
                                             <div class="card-body ">
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
+                                                @if($article->category)
+
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    @else
+                                                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                                    @endif
                                                     <br>
+                                                    <p class="small fst-italic text-capitalize">
+                                                        @foreach ($article->tags as $tag)
+                                                            #{{ $tag->name }}
+                                                        @endforeach
+                                                    </p>
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
@@ -176,7 +186,8 @@
         </div>
     </div>
 
-
+<div class="w-100">
+</div>
     <footer class="footer ">
         <div class="container ">
             <div class="row ">
@@ -228,7 +239,6 @@
             </div>
         </div>
     </div>
-    
 
 
 </x-layout>
