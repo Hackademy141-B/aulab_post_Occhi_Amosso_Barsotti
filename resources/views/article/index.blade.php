@@ -22,7 +22,7 @@
                             <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                 class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
                                 @else
-                                <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                <p class="small text-muted fst-italic m-0">Non categorizzato</p>
                                 @endif
                             <br>
                         
