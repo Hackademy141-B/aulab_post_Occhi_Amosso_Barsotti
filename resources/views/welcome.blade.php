@@ -171,7 +171,8 @@
         </div>
     </div>
 
-
+<div class="w-100">
+</div>
     <footer class="footer ">
         <div class="container ">
             <div class="row ">
@@ -223,7 +224,6 @@
             </div>
         </div>
     </div>
-    
 
 
 </x-layout>
