@@ -9,15 +9,9 @@
 <div class="container-fluid">
 
     @if (session('message'))
-<<<<<<< HEAD
-        <div class="fade-out alert alert-success text-center">
-            {{ session('message') }}
-        </div>
-=======
     <div class=" alert alert-secondary text-center mt-5">
         {{ session('message') }}
     </div>
->>>>>>> 96bb62af60c0b0f5efc866cba4d73673470b33ab
     @endif
 </div>
 
@@ -75,8 +69,13 @@
                                             <div class="card-body ">
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
+                                                @if($article->category)
+
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    @else
+                                                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                                    @endif
                                                     <br>
                                                     <p class="small fst-italic text-capitalize">
                                                         @foreach ($article->tags as $tag)
