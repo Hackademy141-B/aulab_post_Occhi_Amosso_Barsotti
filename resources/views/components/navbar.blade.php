@@ -46,8 +46,8 @@
               </li>
               <li>
                 <form class="d-flex" method="GET" action="{{route('article.search')}}">
-                  <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
-                  <button class="btn btn-outline-info" type="submit">Cerca</button>
+                  <input class="form-control mx-2  me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+                  <button class="btn btn-outline-secondary" type="submit">Cerca</button>
                 </form>                
               </li>
             {{-- </ul>
