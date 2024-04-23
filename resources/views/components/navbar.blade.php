@@ -37,7 +37,7 @@
         </form>
         <div class=" ms-3">
           <ul class="navbar-nav"> 
-            <li class="welcome me-2 mt-2">Benvenuto, {{ Auth::user()->name }}</li>
+            <li class="me-2 mt-2 small">Benvenuto, {{ Auth::user()->name }}</li>
             <li class="mt-2"><a type="button" class="btn btn-outline-dark mt-auto" href="#"
                     onclick="event.preventDefault();document.querySelector('#form-logout').submit();"><i class="bi bi-box-arrow-right"></i></a>
                   </li>
