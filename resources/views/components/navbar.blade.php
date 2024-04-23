@@ -4,7 +4,7 @@
       var header = document.querySelector("navbar");
       header.classList.toggle("sticky", window.scrollY > 0);
   }) --}}
-<header>
+{{-- <header> --}}
 <div class="container-fluid">
     <nav id="navbar" class="navbar fixed-top w-100 px-3 navbar-expand-lg bg-body-trasparent  navbar-light">
         <a class="navbar-brand" href="{{ route('homePage') }}">Aulab Post</a>
@@ -44,6 +44,12 @@
               <li class="nav-item me-auto">
                 <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
               </li>
+              <li>
+                <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                  <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+                  <button class="btn btn-outline-info" type="submit">Cerca</button>
+                </form>                
+              </li>
             {{-- </ul>
                   <ul class="navbar-nav"> --}}
                     <li class="me-3 mt-2">Benvenuto, {{ Auth::user()->name }}</li>
@@ -61,7 +67,7 @@
         </div>
 </div>
 </nav>
-</header>
+{{-- </header> --}}
 
 {{-- <nav class="navbar bg-body-trasparent fixed-top">
     <div class="container-fluid">
