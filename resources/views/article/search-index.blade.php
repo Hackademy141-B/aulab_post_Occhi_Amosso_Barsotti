@@ -19,6 +19,11 @@
                           <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                               class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
                               <br>
+                              <p class="small fst-italic text-capitalize">
+                                @foreach ($article->tags as $tag)
+                                    #{{ $tag->name }}
+                                @endforeach
+                            </p>
                           <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
                               class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                               {{ $article->user->name }}</a>
