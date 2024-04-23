@@ -22,7 +22,7 @@
                     @csrf
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-info text-white">Aggiorna</button>
+                    <button type="submit" class="btn btn-info text-white">Aggia</button>
                 </form>
             </td>
             <td>
