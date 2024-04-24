@@ -1,19 +1,32 @@
 <x-layout>
 
-
+    {{-- <div class="container-fluid  text-center text-dark">
+        <div id="title" class="display-2">
+          Prima pagina
+        </div>
+    </div> --}}
+    
+<div class="container-fluid">
 
     @if (session('message'))
-        <div class="alert alert-success text-center">
-            {{ session('message') }}
-        </div>
+    <div class=" alert alert-secondary text-center mt-5">
+        {{ session('message') }}
+    </div>
     @endif
+</div>
 
     <section class="hero">
+    </div>
         <div class="hero-text">
-            <h1  class="fade-in">AuLab Post</h1>
-            <h2  class="fade-in">Create your article, for free</h2>
-            <p  class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-        </div>
+            <h1 class="fade-in">AuLab Post</h1>
+            <h2 class="fade-in">Create your article, for free</h2>
+            <p class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>               
+              
+
+
+        {{-- <div class="hero-img">
+            <img src="./img1.png" alt="">
+        </div> --}}
     </section>
 
     {{-- <div class="container my-5 ">
@@ -57,9 +70,19 @@
                                             <div class="card-body ">
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
+                                                @if($article->category)
+
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    @else
+                                                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                                    @endif
                                                     <br>
+                                                    <p class="small fst-italic text-capitalize">
+                                                        @foreach ($article->tags as $tag)
+                                                            #{{ $tag->name }}
+                                                        @endforeach
+                                                    </p>
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
@@ -163,7 +186,8 @@
         </div>
     </div>
 
-
+<div class="w-100">
+</div>
     <footer class="footer ">
         <div class="container ">
             <div class="row ">
@@ -215,7 +239,6 @@
             </div>
         </div>
     </div>
-    
 
 
 </x-layout>

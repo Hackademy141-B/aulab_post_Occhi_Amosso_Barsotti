@@ -10,7 +10,7 @@
     
     <div class="container my-5 ">
         <div class="row justify-content-around margin">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6">
             <div class="card img-thumbnail shadow  border border-3  rounded-4">
                 <img src="{{ Storage::url($article->img) }}" alt="" class="img-fluid my-3">
                 <div class="text-center">
@@ -28,11 +28,11 @@
              @if(Auth::user() && Auth::user()->is_revisor)
              <form action="{{route('revisor.acceptArticle', compact('article'))}}" method="POST">
                 @csrf
-                <button class="btn btn-success text-white my-5">Accetta articolo</button>
+                <button class="btn btn-success text-white m-5">Accetta articolo</button>
              </form>
              <form action="{{route('revisor.rejectArticle', compact('article'))}}" method="POST">
                 @csrf
-                <button class="btn btn-success text-white my-5">Rifiuta articolo</button>
+                <button class="btn btn-danger text-white m-5">Rifiuta articolo</button>
              </form>
              @endif
                 </div>
