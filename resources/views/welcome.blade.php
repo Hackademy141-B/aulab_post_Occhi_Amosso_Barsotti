@@ -1,16 +1,15 @@
 <x-layout>
 
-    {{-- <div class="container-fluid  text-center text-dark">
-        <div id="title" class="display-2">
-          Prima pagina
-        </div>
-    </div> --}}
-    
+
 <div class="container-fluid">
 
     @if (session('message'))
-    <div class=" alert alert-secondary text-center mt-5">
+    <div class=" alert alert-success text-center mt-5">
         {{ session('message') }}
+    </div>
+    @elseif (session('notmessage'))
+    <div class=" alert alert-danger text-center mt-5">
+        {{ session('notmessage') }}
     </div>
     @endif
 </div>
@@ -21,12 +20,6 @@
             <h1 class="fade-in">AuLab Post</h1>
             <h2 class="fade-in">Create your article, for free</h2>
             <p class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>               
-              
-
-
-        {{-- <div class="hero-img">
-            <img src="./img1.png" alt="">
-        </div> --}}
     </section>
 
     {{-- <div class="container my-5 ">
@@ -61,9 +54,9 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                     <div class="cards-wrapper pb-5">
                         <div class="container my-5">
-                            <div class="row justify-content-around ">
+                            <div class="row justify-content-center">
                                 @foreach ($articles as $article)
-                                    <div class="col-10 col-md-4 my-2 ">
+                                    <div class="col-10 col-md-3 my-2 ">
                                         <div class="card  shadow  border border-3  rounded-4">
                                             <img class="img-thumbnail border border-0 rounded-4 card-img-top h-img"
                                                 src="{{ Storage::url($article->img) }}" alt="">
@@ -86,13 +79,6 @@
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
                                                     class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
-                                                {{-- <p class="small text-muted  text-capitalize">
-                                                    {{ $article->category->name }}</p> --}}
-                                                {{-- <div
-                                                    class="text-muted d-none d-flex justify-content-between align-items-center">
-                                                    Redatto il {{ $article->created_at->format('d/m/Y') }} da
-                                                    {{ $article->user->name }}
-                                                </div> --}}
                                                 <br>
                                                 <a href="{{ route('article.show', compact('article')) }}"
                                                     class="btn btn-secondary mt-2">Leggi</a>
@@ -104,10 +90,10 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="carousel-item" data-bs-interval="2000">
+                <div class="carousel-item active" data-bs-interval="10000">
                     <div class="cards-wrapper pb-5">
-                        <div class="container  my-5">
-                            <div class="row  justify-content-around ">
+                        <div class="container my-5">
+                            <div class="row justify-content-center">
                                 @foreach ($articles as $article)
                                     <div class="col-10 col-md-3 my-2 ">
                                         <div class="card  shadow  border border-3  rounded-4">
@@ -116,20 +102,25 @@
                                             <div class="card-body ">
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
+                                                @if($article->category)
+
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">{{ $article->category->name }}</a>
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    @else
+                                                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                                    @endif
+                                                    <br>
+                                                    <p class="small fst-italic text-capitalize">
+                                                        @foreach ($article->tags as $tag)
+                                                            #{{ $tag->name }}
+                                                        @endforeach
+                                                    </p>
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
-                                                <p class="small text-muted  text-capitalize">
-                                                    {{ $article->category->name }}</p>
-                                                <div
-                                                    class="text-muted d-none d-flex justify-content-between align-items-center">
-                                                    Redatto il {{ $article->created_at->format('d/m/Y') }} da
-                                                    {{ $article->user->name }}
-                                                </div>
+                                                <br>
                                                 <a href="{{ route('article.show', compact('article')) }}"
-                                                    class="btn btn-secondary ">Leggi</a>
+                                                    class="btn btn-secondary mt-2">Leggi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -138,10 +129,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item active" data-bs-interval="10000">
                     <div class="cards-wrapper pb-5">
-                        <div class="container  my-5">
-                            <div class="row  justify-content-around ">
+                        <div class="container my-5">
+                            <div class="row justify-content-center">
                                 @foreach ($articles as $article)
                                     <div class="col-10 col-md-3 my-2 ">
                                         <div class="card  shadow  border border-3  rounded-4">
@@ -150,20 +141,25 @@
                                             <div class="card-body ">
                                                 <h5 class="card-title text-truncate">{{ $article->title }}</h5>
                                                 <p class="card-text text-truncate">{{ $article->subtitle }}</p>
+                                                @if($article->category)
+
                                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">{{ $article->category->name }}</a>
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Categoria:</b> {{ $article->category->name }}</a>
+                                                    @else
+                                                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                                                    @endif
+                                                    <br>
+                                                    <p class="small fst-italic text-capitalize">
+                                                        @foreach ($article->tags as $tag)
+                                                            #{{ $tag->name }}
+                                                        @endforeach
+                                                    </p>
                                                 <a href="{{ route('article.byRedactor', ['user' => $article->user->id]) }}"
-                                                    class="small text-muted  text-capitalize text-truncate">
+                                                    class="small text-muted  text-capitalize text-truncate"><b>Redatto da:</b> 
                                                     {{ $article->user->name }}</a>
-                                                <p class="small text-muted  text-capitalize">
-                                                    {{ $article->category->name }}</p>
-                                                <div
-                                                    class="text-muted d-none d-flex justify-content-between align-items-center">
-                                                    Redatto il {{ $article->created_at->format('d/m/Y') }} da
-                                                    {{ $article->user->name }}
-                                                </div>
+                                                <br>
                                                 <a href="{{ route('article.show', compact('article')) }}"
-                                                    class="btn btn-secondary ">Leggi</a>
+                                                    class="btn btn-secondary mt-2">Leggi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -171,9 +167,8 @@
                             </div>
                         </div>
                     </div>
-                </div> --}}
-            </div>
-            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -182,7 +177,7 @@
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button> --}}
+            </button>
         </div>
     </div>
 

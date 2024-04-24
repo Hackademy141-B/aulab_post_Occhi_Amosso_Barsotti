@@ -21,9 +21,9 @@
                     </div>
                 @endif
 
-                @if (session('message'))
+                @if (session('notmessage'))
                     <div class="alert alert-seccess text-center">
-                        {{ session('message') }}
+                        {{ session('notmessage') }}
                     </div>
                 @endif
 
