@@ -48,25 +48,12 @@
   
 }
 
-<<<<<<< HEAD
-
-.fade-in{
-  animation: fade-in 1.7s ;
-}
-
-.slide-up{
-  animation: slide-up 1s;
-}
-
-
-=======
 @keyframes fade-out {
   0% {opacity: 1;}
   100% {opacity: 0;}
   
 }
 
->>>>>>> 5b4025992c7e4a7e7afcb08a36a6f52db39fc3ef
 ::-webkit-scrollbar{
   width: 7px;
 }
@@ -212,13 +199,25 @@ body {
 }
 
 
+.social{
+  font-size: 30px;
+  margin-left: 27px;
+}
+
+.ArticleSearch{
+  font-size: 60px;
+}
+
+.revisortext{
+  font-size: 60px;
+}
 
 
 .search{
   position :relative;
   width: 40px;
   height: 40px;
-  /* box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1); */
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
   border-radius:4rem;
   padding: 14px;
   overflow: hidden;

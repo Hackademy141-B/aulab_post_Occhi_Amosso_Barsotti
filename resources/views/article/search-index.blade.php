@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
-      <div class="row justify-content-center">
-        <h1 class="display-1">
+    <div class="container-fluid p-5 text-center ">
+      <div class="row justify-content-center pt-5">
+        <h1 class="ArticleSearch pt-5">
           Tutti gli articoli per: {{$query}}
         </h1>
       </div>
