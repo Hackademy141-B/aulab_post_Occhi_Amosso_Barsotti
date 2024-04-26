@@ -21,12 +21,8 @@
                 <form action="{{route('admin.editTag', ['tag' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('put')
-                    <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
-<<<<<<< HEAD
-                    <button type="submit" class="btn btn-info text-white"><i class="bi bi-arrow-clockwise"></i></button>
-=======
-                    <button type="submit" class="btn btn-info text-white">Aggia</button>
->>>>>>> ec63828118bcfc2ac73510289c7e2a9e4ea56778
+                    <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control pt-2 w-50 d-inline">
+                    <button type="submit" class="btn btn-dark text-white"><i class="bi bi-arrow-clockwise"></i></button>
                 </form>
             </td>
             <td>
@@ -35,7 +31,7 @@
                     @csrf
                     @method('delete')
                    
-                    <button type="submit" class="btn btn-danger text-white">Elimina</button>
+                    <button type="submit" class="btn btn-danger text-white"><i class="bi bi-trash3-fill"></i></button>
                 </form>
             </td>
             @else
@@ -45,7 +41,7 @@
                     @csrf
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-info text-white"><i class="bi bi-arrow-clockwise"></i></button>
+                    <button type="submit" class="btn btn-dark text-white"><i class="bi bi-arrow-clockwise"></i></button>
                 </form>
             </td>
             <td>
@@ -53,7 +49,7 @@
                     @csrf
                     @method('delete')
                    
-                    <button type="submit" class="btn btn-danger text-white">Elimina</button>
+                    <button type="submit" class="btn btn-danger text-white"><i class="bi bi-trash3-fill"></i></button>
                 </form>
             </td>
             @endif

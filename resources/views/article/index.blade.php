@@ -8,6 +8,8 @@
         </div>
     </div>
 
+
+
     <div class="container  my-5">
         <div class="row  justify-content-around ">
             @foreach ($articles as $article)
@@ -24,6 +26,7 @@
                                 @else
                                 <p class="small text-muted fst-italic m-0">Non categorizzato</p>
                                 @endif
+                                <span class="text-muted small">- Tempo di lettura {{$article->readDuration()}} min </span>
                             <br>
                         
                             <p class="small fst-italic text-capitalize">

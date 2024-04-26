@@ -34,14 +34,13 @@
                         @break
 
                         @case('redattore')
-                        <form action="{{ route('admin.setWriter', compact('user')) }}" method="POST">
-                            @csrf
-                            @method('patch')
+                            <form action="{{ route('admin.setWriter', compact('user')) }}" method="POST">
+                                @csrf
+                                @method('patch')
 
-                            <button type="submit" class="btn btn-success text-white"> Attiva {{ $role }}</button>
-                        </form>
-                    @break
-                    
+                                <button type="submit" class="btn btn-success text-white"> Attiva {{ $role }}</button>
+                            </form>
+                        @break
                     @endswitch
 
                 </td>
@@ -51,6 +50,3 @@
     <tbody>
 
 </table>
-                        
-
-
