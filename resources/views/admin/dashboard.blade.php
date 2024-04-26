@@ -1,20 +1,25 @@
 <x-layout>
 
-<div class=" container-fluid p-5 bg-info text-center text-white">
-    <div class="row justify-content-center">
-        <div class="display-1">
-            Bentornato Amministratore
+<div class=" container-fluid pt-5  text-center ">
+    <div class="row pt-5  justify-content-center">
+        <div class="adminWelcome">
+            Bentornato!
         </div>
     </div>
 </div>
 
 @if (session('message'))
-    <div class="alert alert-success text-center">
+<div class="containermessage  pb-5">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="alert alert-success text-center">
         {{ session('message') }}
+            </div>
+        </div>
     </div>
+</div>
 @endif
-
-<div class=" container my-5">
+<div class="adbox1 container  mt-5 p-4 my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>Richieste per ruolo Amministratore</h2>
@@ -23,7 +28,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="adbox2 container p-4 my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>Richieste per ruolo Revisore</h2>
@@ -32,7 +37,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="adbox3 container p-4  my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>Richieste per ruolo Redattore</h2>
@@ -41,7 +46,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="adbox4 container p-4 my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>I tags della piattaforma</h2>
@@ -50,7 +55,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="adbox5 container p-4 my-5">
     <div class="row justify-content-center">
         <div class="col-12">
             <h2>Le categorie della piattaforma</h2>

@@ -19,6 +19,6 @@ class UserIsRevisor
         if(Auth::user() && Auth::user()->is_revisor){
             return $next($request);
         }
-        return redirect(route('homePage'))->with('message', 'Non sei autorizzato');
+        return redirect(route('homePage'))->with('notmessage', 'Non sei autorizzato');
     }
 }

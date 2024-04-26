@@ -14,6 +14,36 @@
   font-style: bold;
 }
 
+.adbox1{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.adbox2{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.adbox3{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.adbox4{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.adbox5{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+
+
+.showArticle{
+  font-size: 60px;
+}
 
 
 .workwithus {
@@ -26,6 +56,10 @@
 
 
 .insertArticle{
+  font-size: 60px;
+}
+
+.adminWelcome{
   font-size: 60px;
 }
 /* #title{
@@ -79,13 +113,8 @@
   transition:all 0.4s ;
 }
 
-.fade-in{
-  animation: fade-in 1.7s ;
-}
 
-.fade-out{
-  animation: fade-out 5s;
-}
+
 
 
 
@@ -198,13 +227,52 @@ body {
 }
 
 
+.social{
+  font-size: 30px;
+  margin-left: 27px;
+}
 
+.ArticleSearch{
+  font-size: 60px;
+}
+
+.revisortext{
+  font-size: 60px;
+}
+
+.box1{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+ 
+}
+
+.alert{
+  position: relative;
+  top: 5vh;
+
+}
+
+.modify{
+  font-size: 20px;
+}
+
+.box2{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.box3{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
 
 .search{
   position :relative;
   width: 40px;
   height: 40px;
-  /* box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1); */
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
   border-radius:4rem;
   padding: 14px;
   overflow: hidden;
@@ -265,7 +333,7 @@ body {
 }
 
 .show-search{
-  width: 49%;
+  width: 20%;
 }
 
 .show-search .search__input{

@@ -2,7 +2,7 @@
 <x-layout>
     <div class="container-fluid pt-5 text-center text-dark">
         <div class="insertArticle pt-5">
-            Inserisci un articolo
+            Modifica articolo
         </div>
     </div>
 
@@ -21,25 +21,26 @@
                     </div>
                 @endif
 
-                @if (session('notmessage'))
+                 @if (session('message'))
                     <div class="alert alert-seccess text-center">
-                        {{ session('notmessage') }}
+                        {{ session('message') }}
                     </div>
-                @endif
+                @endif 
 
-                <form class="card p-5 shadow" action="{{ route('article.store') }}" method="post"
+                <form class="card p-5 shadow" action="{{route('article.update', compact('article'))}}" method="post"
                     enctype="multipart/form-data">
                     @csrf
+                    @method('put')
 
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo:</label>
                         <input name="title" type="text" class="form-control" id="title"
-                            value="{{ old('title') }}">
+                            value="{{$article->title}}">
                     </div>
                     <div class="mb-3">
                         <label for="subtitle" class="form-label">Sottotitolo:</label>
                         <input name="subtitle" type="text" class="form-control" id="subtitle"
-                            value="{{ old('subtitle') }}">
+                            value="{{$article->title}}">
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Immagine:</label>
@@ -47,20 +48,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="tags" class="form-label">Tags:</label>
-                        <input name="tags" class="form-control" id="tags" value="{{ old('tags') }}">
+                        <input name="tags" class="form-control" id="tags" value="{{$article->tags->implode('name', ',')}}">
                         <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">Categoria:</label>
                         <select name="category" id="category" class="form-control capitalize">
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}" @if($article->category && $category->id == $article->category->id) selected @endIf>{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="body" class="form-label">Corpo del testo:</label>
-                        <textarea name="body" id="body" cols="30" rows="7" class="form-control">{{ old('body') }}</textarea>
+                        <textarea name="body" id="body" cols="30" rows="7" class="form-control">{{ $article->body }}</textarea>
                     </div>
 
                     <div class="mt-2">

@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
-      <div class="row justify-content-center">
-        <h1 class="display-1">
+    <div class="container-fluid p-5 text-center ">
+      <div class="row justify-content-center pt-5">
+        <h1 class="ArticleSearch pt-5">
           Tutti gli articoli per: {{$query}}
         </h1>
       </div>
@@ -10,7 +10,7 @@
     <div class="container  my-5">
       <div class="row  justify-content-around ">
           @foreach($articles as $article)
-              <div class="col-10 col-md-4 my-2 ">
+              <div class="col-9 col-md-5 col-lg-4 col-xxl-3 my-2 ">
                   <div class="card  shadow  border border-3  rounded-4">
                       <img class="img-thumbnail border border-0 rounded-4 card-img-top h-img" src="{{ Storage::url($article->img) }}" alt="">
                       <div class="card-body ">

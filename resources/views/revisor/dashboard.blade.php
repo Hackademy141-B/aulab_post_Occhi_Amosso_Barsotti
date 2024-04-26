@@ -1,9 +1,9 @@
 <x-layout>
 
-    <div class=" container-fluid p-5 bg-info text-center text-white">
-        <div class="row justify-content-center">
-            <div class="display-1">
-                Bentornato, Revisore
+    <div class=" container-fluid p-5 pt-5 text-center ">
+        <div class="row pt-5 justify-content-center">
+            <div class="revisortext">
+                Bentornato!
             </div>
         </div>
     </div>
@@ -14,27 +14,27 @@
         </div>
     @endif
     
-    <div class=" container my-5">
+    <div class="box1 container  p-3 my-5">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-11">
                 <h2>Articoli da revisionare</h2>
                 <x-articles-table :articles="$unrevisionedArticles" />
             </div>
         </div>
     </div>
     
-    <div class="container my-5">
+    <div class="box2 container  p-3 my-5">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-11">
                 <h2>Articoli pubblicati</h2>
                 <x-articles-table :articles="$acceptedArticles" />
             </div>
         </div>
     </div>
     
-    <div class="container my-5">
+    <div class="box3 container  p-3 my-5">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-11">
                 <h2>Articoli respinti</h2>
                 <x-articles-table :articles="$rejectedArticles" />
             </div>

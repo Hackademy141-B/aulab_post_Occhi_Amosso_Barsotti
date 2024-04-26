@@ -21,6 +21,11 @@
                 <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard dal revisore</a>
               </li>
               @endIf
+              @if(Auth::user()->is_writer)
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('writer.dashboard')}}">Dashboard dal redattore</a>
+              </li>
+              @endIf
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
              </li>
@@ -29,8 +34,8 @@
               </li>
         </ul>
         <form action="{{route('article.search')}}" method="GET" class="search p-0 ps-2 " id="search-bar">
-          <input type="search" placeholder="Cosa Stai Cercando?" class="search__input">
-          <div class="search__button" id="search-button">
+          <input type="search" name="query" aria-label="Search" placeholder="Cosa Stai Cercando?" class="search__input">
+          <div class="search__button" type="submit" id="search-button">
             <i class="bi bi-search search__icon"></i>
             <i class="bi bi-x-lg search__close"></i>
           </div>
