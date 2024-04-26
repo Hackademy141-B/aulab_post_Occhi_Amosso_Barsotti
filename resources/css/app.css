@@ -40,11 +40,29 @@
   background-color: white;
 }
 
+.writerBox1{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.writerBox2{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.writerBox3{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
 
 .showArticle{
   font-size: 60px;
 }
 
+.writerDashboard{
+  font-size: 60px;
+}
 
 .workwithus {
   font-size: 60px;
@@ -272,7 +290,7 @@ body {
   position :relative;
   width: 40px;
   height: 40px;
-  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
+  /* box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1); */
   border-radius:4rem;
   padding: 14px;
   overflow: hidden;
@@ -299,8 +317,8 @@ body {
 }
 
 .search__button{
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   background-color: var(--nero);
   border-radius: 50%;
   position: absolute;
@@ -333,7 +351,7 @@ body {
 }
 
 .show-search{
-  width: 20%;
+  width: 30%;
 }
 
 .show-search .search__input{
