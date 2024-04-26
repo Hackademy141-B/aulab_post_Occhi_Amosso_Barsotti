@@ -1,6 +1,8 @@
 <x-layout>
 
 
+    {{-- message --}}
+
 <div class="container-fluid">
 
     @if (session('message'))
@@ -14,6 +16,8 @@
     @endif
 </div>
 
+
+{{--  --}}
     <section class="hero">
     </div>
         <div class="hero-text">
@@ -22,6 +26,10 @@
             <p class="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>               
     </section>
 
+
+
+    
+    {{-- carosello --}}
     
     <div class="box">
         <div class="boxtitle  text-center  pt-5 d-flex justify-content-center">
@@ -48,6 +56,7 @@
                                                     @else
                                                     <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
                                                     @endif
+                                                    <span class="text-muted small">- Tempo di lettura {{$article->readDuration()}} min </span>
                                                     <br>
                                                     <p class="small fst-italic text-capitalize">
                                                         @foreach ($article->tags as $tag)
@@ -87,6 +96,7 @@
                                                     @else
                                                     <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
                                                     @endif
+                                                    <span class="text-muted small">- Tempo di lettura {{$article->readDuration()}} min </span>
                                                     <br>
                                                     <p class="small fst-italic text-capitalize">
                                                         @foreach ($article->tags as $tag)
@@ -126,6 +136,7 @@
                                                     @else
                                                     <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
                                                     @endif
+                                                    <span class="text-muted small">- Tempo di lettura {{$article->readDuration()}} min </span>
                                                     <br>
                                                     <p class="small fst-italic text-capitalize">
                                                         @foreach ($article->tags as $tag)
@@ -160,6 +171,9 @@
             </button>
         </div>
     </div>
+
+{{-- footer --}}
+
 
 <div class="w-100">
 </div>

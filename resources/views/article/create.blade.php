@@ -64,8 +64,8 @@
                     </div>
 
                     <div class="mt-2">
-                        <button class="btn btn-outline-dark ">Inserisci un articolo</button>
-                        <p class="mt-3 "><a class="btn btn-outline-danger" href="{{ route('homePage') }}">Torna alla
+                        <button class="btn btn-dark ">Inserisci un articolo</button>
+                        <p class="mt-3 "><a class="btn btn-outline-secondary" href="{{ route('homePage') }}">Torna alla
                                 home</a></p>
                     </div>
                 </form>
