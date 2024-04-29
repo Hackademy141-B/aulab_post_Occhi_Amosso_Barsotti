@@ -20,7 +20,7 @@
 
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 @foreach ($categories as $category)
-                                    <li><a class="dropdown-item"
+                                    <li><a class="dropdown dropdown-item"
                                             href= "{{ route('article.byCategory', compact('category')) }}">
                                             {{ $category->name }} </a></li>
                                 @endforeach
