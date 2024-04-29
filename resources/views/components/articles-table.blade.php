@@ -17,7 +17,7 @@
                 <td>{{ $article->user->name}}</td>
                 <td>
                 @if (is_null($article->is_accepted))
-                <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi l'articolo</a>
+                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary text-white"><i class="bi bi-eye"></i></a>
                 @else
                 <form action="{{route('revisor.undoArticle', compact('article'))}}" method="POST">
                     @csrf
