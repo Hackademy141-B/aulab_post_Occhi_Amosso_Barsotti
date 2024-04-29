@@ -37,8 +37,7 @@
                         <button class="btn btn-danger text-white p-2  m-1">Rifiuta  <i class="bi bi-ban"></i></button>
                     </div>
                     </form>
-                    <div>
-                    </div>
+                    
                         
                         
                     @endif
