@@ -1,10 +1,10 @@
 <table class="table table-striped table-hover border">
     <thead class="table-dark">
         <tr>
-            <th scope="col">#</th>
+            <th class="rounded-start" scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
-            <th scope="col">Azioni</th>
+            <th class="rounded-end" scope="col">Azioni</th>
         </tr>
     </thead>
     <tbody>

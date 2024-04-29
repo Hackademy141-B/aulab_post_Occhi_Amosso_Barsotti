@@ -1,8 +1,3 @@
-
-
-
-
-
 <nav id="navbar" class="navbar nav-bar fixed-top w-100 px-3 navbar-expand-lg bg-body-trasparent  navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand mb-1" href="{{ route('homePage') }}">Aulab Post</a>
@@ -12,9 +7,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-between w-100 mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ route('article.index') }}">Tutti gli articoli</a>
-                </li>
+                <div class="nav-item d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ route('article.index') }}">Tutti gli articoli</a>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorie
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                @foreach ($categories as $category)
+                                    <li><a class="dropdown-item"
+                                            href= "{{ route('article.byCategory', compact('category')) }}">
+                                            {{ $category->name }} </a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </li>
+                </div>
                 @auth
                     @if (Auth::user()->is_admin)
                         <li class="nav-item">

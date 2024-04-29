@@ -2,7 +2,7 @@
 
     <div class="container-fluid p-5  text-center ">
         <div class="row justify-content-center">
-            <h1 class="display-4">
+            <h1 class="display-4 mt-5">
                 Gli Articoli di {{ $user->name }}
             </h1>
         </div>
