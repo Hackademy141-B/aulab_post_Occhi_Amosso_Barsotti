@@ -3,7 +3,7 @@
     <div class=" container-fluid p-5 pt-5 text-center ">
         <div class="row pt-5 justify-content-center">
             <div class="revisortext">
-                Bentornato!
+                Bentornato
             </div>
         </div>
     </div>

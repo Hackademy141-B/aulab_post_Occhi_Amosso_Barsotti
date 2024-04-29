@@ -123,7 +123,7 @@ class ArticleController extends Controller
             'title' => 'required|min:5|unique:articles,title,' . $article->id,
             'subtitle' => 'required|min:5',
             'body' => 'required|min:10',
-            'img' => 'img',
+            'img' => 'image',
             'tags' => 'required',
         ]);
     
