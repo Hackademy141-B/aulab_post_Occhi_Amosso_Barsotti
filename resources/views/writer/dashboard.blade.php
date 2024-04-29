@@ -1,19 +1,20 @@
 <x-layout>
 
     <div class=" container-fluid p-5  text-center ">
+    <div class=" container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="writerDashboard pt-5">
                 Bentornato
             </h1>
         </div>
     </div>
-    
+
     @if (session('message'))
         <div class="alert alert-success text-center">
             {{ session('message') }}
         </div>
     @endif
-    
+
     <div class="writerBox1 p-3 container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -22,7 +23,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="writerBox2 p-3 container  my-5">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -31,7 +32,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="writerBox3 p-3 container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -40,6 +41,5 @@
             </div>
         </div>
     </div>
-    
-    </x-layout>
-    
+
+</x-layout>

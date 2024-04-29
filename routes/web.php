@@ -59,3 +59,4 @@ Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'
 });
 
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
